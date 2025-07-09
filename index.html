@@ -1,24 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon</title>
-  <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    h1 { font-size: 3em; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon!</title>
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* --- Logo --- */
+        .logo {
+            max-width: 180px; /* Adjust size as needed */
+            margin-bottom: 30px;
+        }
+
+        /* --- Text Styles --- */
+        h1 {
+            font-size: 42px;
+            color: #1c1e21;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #606770;
+            font-weight: normal;
+            margin-top: 50px; /* Space above the team section */
+            margin-bottom: 30px;
+        }
+        
+        /* --- Team Section --- */
+        .team-container {
+            display: flex;
+            justify-content: space-around; /* This spreads the items out */
+            flex-wrap: wrap; /* This is key for mobile! */
+            margin-top: 20px;
+        }
+
+        .team-member {
+            flex-basis: 20%; /* Tries to fit 4 in a row, with some space */
+            min-width: 150px; /* Prevents them from getting too small */
+            margin: 15px;
+        }
+
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* This makes the image a perfect circle */
+            object-fit: cover; /* Prevents the image from being stretched */
+            border: 4px solid #e9ecef;
+            background-color: #ccc; /* Shows a grey circle if image is missing */
+        }
+        
+        .team-name {
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+    </style>
 </head>
 <body>
-  <h1>Coming Soon...</h1>
+
+    <div class="container">
+
+        <!-- 1. YOUR LOGO -->
+        <!-- Make sure you have a file named 'your-logo.png' -->
+        <img src="your-logo.png" alt="Our Brand Logo" class="logo">
+
+        <h1>We are Coming Soon......</h1>
+
+        <h2>Working Hard to Build This For You</h2>
+
+        <!-- 2. YOUR TEAM -->
+        <div class="team-container">
+            
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <!-- Make sure you have a file named 'person1.png' -->
+                <img src="person1.png" alt="Team Member 1" class="team-photo">
+                <p class="team-name">Name 1</p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <!-- Make sure you have a file named 'person2.png' -->
+                <img src="person2.png" alt="Team Member 2" class="team-photo">
+                <p class="team-name">Name 2</p>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <!-- Make sure you have a file named 'person3.png' -->
+                <img src="person3.png" alt="Team Member 3" class="team-photo">
+                <p class="team-name">Name 3</p>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-member">
+                <!-- Make sure you have a file named 'person4.png' -->
+                <img src="person4.png" alt="Team Member 4" class="team-photo">
+                <p class="team-name">Name 4</p>
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 </html>

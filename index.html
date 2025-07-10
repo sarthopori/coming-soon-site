@@ -6,11 +6,11 @@
     <title>XpertZones - Coming Soon</title>
     <style>
         /* --- Global Styles & Fonts --- */
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700;900&display=swap');
 
         body {
             font-family: 'Open Sans', 'Roboto', sans-serif;
-            background-color: #f4f7f6; /* A very light off-white background */
+            background-color: #f4f7f6;
             margin: 0;
             padding: 40px 20px;
             color: #000000;
@@ -22,41 +22,47 @@
         }
 
         .logo {
-            max-width: 200px; /* Medium size, visually balanced */
-            margin-bottom: 40px; /* 40px bottom margin */
+            max-width: 200px;
+            margin-bottom: 30px; 
         }
 
         .main-heading {
-            font-size: clamp(48px, 8vw, 60px); /* Responsive font size between 48px and 60px */
-            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+            /* ADJUSTMENT: Made font significantly larger */
+            font-size: clamp(60px, 10vw, 80px); 
+            font-weight: 900; /* Bolder */
             text-transform: uppercase;
-            color: #1E3A5F; /* Deep Blue */
-            margin: 0 0 10px 0; /* 10px bottom margin */
+            color: #1E3A5F;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
         }
 
         .subheading {
-            font-size: clamp(18px, 4vw, 22px); /* Responsive font size */
+            font-size: clamp(18px, 4vw, 22px);
             font-weight: 400;
-            margin: 0 0 50px 0; /* 50px bottom margin */
+            /* ADJUSTMENT: Reduced bottom margin to bring content closer */
+            margin: 0 0 40px 0; 
         }
 
         /* --- SECTION 2: TEAM MEMBER AREA --- */
         .team-section {
             max-width: 1200px;
-            margin: 0 auto; /* Centered horizontally */
+            margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px; /* Spacing between cards */
+            gap: 20px;
         }
 
         .team-card {
-            flex: 1 1 270px; /* Responsive columns, aiming for 4 on desktop */
-            max-width: 320px;
+            /* ADJUSTMENT: Made card smaller to fit in one line */
+            flex: 1 1 250px; 
+            max-width: 280px; 
             background-color: #ffffff;
             border: 1px solid #000000;
             padding: 20px;
-            text-align: left; /* Text is left-aligned inside the card */
+            /* ADJUSTMENT: All text inside the card is now center-aligned */
+            text-align: center; 
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
@@ -65,7 +71,7 @@
         .team-card .profile-picture {
             width: 100%;
             height: auto;
-            max-height: 250px; /* Constrain image height */
+            max-height: 220px;
             object-fit: cover;
             border-radius: 4px;
             margin-bottom: 15px;
@@ -73,32 +79,33 @@
 
         .team-card .name {
             font-size: 18px;
-            font-weight: bold;
+            /* ADJUSTMENT: Name is confirmed bold */
+            font-weight: bold; 
             text-transform: uppercase;
-            color: #007BBD; /* First Name Color: Deep Blue */
+            color: #007BBD;
             margin: 0 0 5px 0;
         }
         
         .team-card .name .last-name {
-            color: #000000; /* Last Name Color: Black */
+            color: #000000;
         }
 
         .team-card .position {
             font-size: 15px;
-            font-weight: 600; /* Semi-Bold */
-            color: #333333; /* Dark Gray */
+            font-weight: 600;
+            color: #333333;
             margin: 0 0 10px 0;
         }
 
         .team-card .description {
             font-size: 14px;
-            color: #333333; /* Dark Gray */
+            color: #333333;
             line-height: 1.5;
             margin: 0;
         }
 
         .team-card .description p {
-            margin: 0 0 10px 0; /* Space between paragraphs */
+            margin: 0 0 10px 0;
         }
 
         .team-card .description p:last-child {
@@ -108,7 +115,8 @@
         /* --- FOOTER --- */
         .footer-area {
             text-align: center;
-            margin-top: 60px;
+            /* ADJUSTMENT: Reduced top margin */
+            margin-top: 50px; 
             font-size: 16px;
             color: #333333;
         }
@@ -117,23 +125,14 @@
             color: #007BBD;
             text-decoration: none;
         }
-
-        /* --- RESPONSIVE BEHAVIOR --- */
-        /* On mobile screens, the flexbox layout handles stacking automatically. No media query needed for basic stacking. */
-
     </style>
 </head>
 <body>
 
     <!-- 🔷 SECTION 1: HEADER AREA (Centered) -->
     <header class="header-area">
-        <!-- A. Logo -->
         <img src="logo.png" alt="XpertZones Logo" class="logo">
-        
-        <!-- B. Main Heading -->
         <h1 class="main-heading">COMING SOON</h1>
-        
-        <!-- C. Subheading -->
         <p class="subheading">Stay tuned — something great is on the way.</p>
     </header>
 
@@ -149,7 +148,6 @@
                 <div class="description">
                     <p>Shachindra oversees full-scale operations at XpertZones and leads client communication channels.</p>
                     <p>He ensures every client is matched with the right service team for smooth project execution.</p>
-                    <p>With strong leadership and organizational insight, he drives service excellence from start to finish.</p>
                 </div>
             </div>
 
@@ -161,7 +159,6 @@
                 <div class="description">
                     <p>Sanjoy brings over 8 years of experience in the graphic design industry.</p>
                     <p>He leads all creative strategies and manages the entire design team at XpertZones.</p>
-                    <p>From branding to UI/UX, he ensures every visual delivers impact and professionalism.</p>
                 </div>
             </div>
 
@@ -173,7 +170,6 @@
                 <div class="description">
                     <p>Indrojit leads the full web development wing of XpertZones, covering both front-end and back-end systems.</p>
                     <p>He specializes in building high-performance, secure, and scalable digital platforms.</p>
-                    <p>With a passion for innovation, he ensures every project is technically future-proof.</p>
                 </div>
             </div>
 
@@ -185,7 +181,6 @@
                 <div class="description">
                     <p>Sapnil is in charge of all digital marketing strategies and performance-driven campaigns at XpertZones.</p>
                     <p>He works across SEO, social media, content, and paid ads to boost brand visibility.</p>
-                    <p>His marketing leadership ensures each client reaches their audience with precision.</p>
                 </div>
             </div>
 

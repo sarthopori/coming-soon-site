@@ -3,126 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon!</title>
+    <title>XpertZones - Coming Soon</title>
     <style>
-        /* --- General Styles --- */
+        /* --- Global Styles & Fonts --- */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
+            font-family: 'Open Sans', 'Roboto', sans-serif;
+            background-color: #f4f7f6; /* A very light off-white background */
             margin: 0;
             padding: 40px 20px;
+            color: #000000;
+        }
+
+        /* --- SECTION 1: HEADER AREA --- */
+        .header-area {
             text-align: center;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        /* --- Logo --- */
         .logo {
-            max-width: 180px; /* Adjust size as needed */
-            margin-bottom: 30px;
+            max-width: 200px; /* Medium size, visually balanced */
+            margin-bottom: 40px; /* 40px bottom margin */
         }
 
-        /* --- Text Styles --- */
-        h1 {
-            font-size: 42px;
-            color: #1c1e21;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 24px;
-            color: #606770;
-            font-weight: normal;
-            margin-top: 50px; /* Space above the team section */
-            margin-bottom: 30px;
-        }
-        
-        /* --- Team Section --- */
-        .team-container {
-            display: flex;
-            justify-content: space-around; /* This spreads the items out */
-            flex-wrap: wrap; /* This is key for mobile! */
-            margin-top: 20px;
-        }
-
-        .team-member {
-            flex-basis: 20%; /* Tries to fit 4 in a row, with some space */
-            min-width: 150px; /* Prevents them from getting too small */
-            margin: 15px;
-        }
-
-        .team-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%; /* This makes the image a perfect circle */
-            object-fit: cover; /* Prevents the image from being stretched */
-            border: 4px solid #e9ecef;
-            background-color: #ccc; /* Shows a grey circle if image is missing */
-        }
-        
-        .team-name {
-            margin-top: 15px;
-            font-size: 16px;
+        .main-heading {
+            font-size: clamp(48px, 8vw, 60px); /* Responsive font size between 48px and 60px */
             font-weight: bold;
-            color: #333;
+            text-transform: uppercase;
+            color: #1E3A5F; /* Deep Blue */
+            margin: 0 0 10px 0; /* 10px bottom margin */
+        }
+
+        .subheading {
+            font-size: clamp(18px, 4vw, 22px); /* Responsive font size */
+            font-weight: 400;
+            margin: 0 0 50px 0; /* 50px bottom margin */
+        }
+
+        /* --- SECTION 2: TEAM MEMBER AREA --- */
+        .team-section {
+            max-width: 1200px;
+            margin: 0 auto; /* Centered horizontally */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Spacing between cards */
+        }
+
+        .team-card {
+            flex: 1 1 270px; /* Responsive columns, aiming for 4 on desktop */
+            max-width: 320px;
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 20px;
+            text-align: left; /* Text is left-aligned inside the card */
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-card .profile-picture {
+            width: 100%;
+            height: auto;
+            max-height: 250px; /* Constrain image height */
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .team-card .name {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #007BBD; /* First Name Color: Deep Blue */
+            margin: 0 0 5px 0;
         }
         
+        .team-card .name .last-name {
+            color: #000000; /* Last Name Color: Black */
+        }
+
+        .team-card .position {
+            font-size: 15px;
+            font-weight: 600; /* Semi-Bold */
+            color: #333333; /* Dark Gray */
+            margin: 0 0 10px 0;
+        }
+
+        .team-card .description {
+            font-size: 14px;
+            color: #333333; /* Dark Gray */
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .team-card .description p {
+            margin: 0 0 10px 0; /* Space between paragraphs */
+        }
+
+        .team-card .description p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- FOOTER --- */
+        .footer-area {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 16px;
+            color: #333333;
+        }
+        
+        .footer-area a {
+            color: #007BBD;
+            text-decoration: none;
+        }
+
+        /* --- RESPONSIVE BEHAVIOR --- */
+        /* On mobile screens, the flexbox layout handles stacking automatically. No media query needed for basic stacking. */
+
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <!-- 🔷 SECTION 1: HEADER AREA (Centered) -->
+    <header class="header-area">
+        <!-- A. Logo -->
+        <img src="logo.png" alt="XpertZones Logo" class="logo">
+        
+        <!-- B. Main Heading -->
+        <h1 class="main-heading">COMING SOON</h1>
+        
+        <!-- C. Subheading -->
+        <p class="subheading">Stay tuned — something great is on the way.</p>
+    </header>
 
-        <!-- 1. YOUR LOGO -->
-        <!-- Make sure you have a file named 'your-logo.png' -->
-        <img src="your-logo.png" alt="Our Brand Logo" class="logo">
+    <!-- 🔷 SECTION 2: TEAM MEMBER AREA -->
+    <main>
+        <section class="team-section">
 
-        <h1>We are Coming Soon......</h1>
-
-        <h2>Working Hard to Build This For You</h2>
-
-        <!-- 2. YOUR TEAM -->
-        <div class="team-container">
-            
-            <!-- Team Member 1 -->
-            <div class="team-member">
-                <!-- Make sure you have a file named 'person1.png' -->
-                <img src="person1.png" alt="Team Member 1" class="team-photo">
-                <p class="team-name">Name 1</p>
+            <!-- Card 1: Shachindra Nath Mondal -->
+            <div class="team-card">
+                <img src="person1.png" alt="Shachindra Nath Mondal" class="profile-picture">
+                <h3 class="name">Shachindra Nath <span class="last-name">Mondal</span></h3>
+                <p class="position">Chief Operations Officer (COO)</p>
+                <div class="description">
+                    <p>Shachindra oversees full-scale operations at XpertZones and leads client communication channels.</p>
+                    <p>He ensures every client is matched with the right service team for smooth project execution.</p>
+                    <p>With strong leadership and organizational insight, he drives service excellence from start to finish.</p>
+                </div>
             </div>
 
-            <!-- Team Member 2 -->
-            <div class="team-member">
-                <!-- Make sure you have a file named 'person2.png' -->
-                <img src="person2.png" alt="Team Member 2" class="team-photo">
-                <p class="team-name">Name 2</p>
+            <!-- Card 2: Sanjoy Kumar Paul -->
+            <div class="team-card">
+                <img src="person2.png" alt="Sanjoy Kumar Paul" class="profile-picture">
+                <h3 class="name">Sanjoy Kumar <span class="last-name">Paul</span></h3>
+                <p class="position">Chief Design Officer (CDO)</p>
+                <div class="description">
+                    <p>Sanjoy brings over 8 years of experience in the graphic design industry.</p>
+                    <p>He leads all creative strategies and manages the entire design team at XpertZones.</p>
+                    <p>From branding to UI/UX, he ensures every visual delivers impact and professionalism.</p>
+                </div>
             </div>
 
-            <!-- Team Member 3 -->
-            <div class="team-member">
-                <!-- Make sure you have a file named 'person3.png' -->
-                <img src="person3.png" alt="Team Member 3" class="team-photo">
-                <p class="team-name">Name 3</p>
+            <!-- Card 3: Indrojit Mondal -->
+            <div class="team-card">
+                <img src="person3.png" alt="Indrojit Mondal" class="profile-picture">
+                <h3 class="name">Indrojit <span class="last-name">Mondal</span></h3>
+                <p class="position">Chief Technology Officer (CTO)</p>
+                <div class="description">
+                    <p>Indrojit leads the full web development wing of XpertZones, covering both front-end and back-end systems.</p>
+                    <p>He specializes in building high-performance, secure, and scalable digital platforms.</p>
+                    <p>With a passion for innovation, he ensures every project is technically future-proof.</p>
+                </div>
             </div>
 
-            <!-- Team Member 4 -->
-            <div class="team-member">
-                <!-- Make sure you have a file named 'person4.png' -->
-                <img src="person4.png" alt="Team Member 4" class="team-photo">
-                <p class="team-name">Name 4</p>
+            <!-- Card 4: Sapnil Pal -->
+            <div class="team-card">
+                <img src="person4.png" alt="Sapnil Pal" class="profile-picture">
+                <h3 class="name">Sapnil <span class="last-name">Pal</span></h3>
+                <p class="position">Chief Marketing Officer (CMO)</p>
+                <div class="description">
+                    <p>Sapnil is in charge of all digital marketing strategies and performance-driven campaigns at XpertZones.</p>
+                    <p>He works across SEO, social media, content, and paid ads to boost brand visibility.</p>
+                    <p>His marketing leadership ensures each client reaches their audience with precision.</p>
+                </div>
             </div>
 
-        </div>
-
-    </div>
+        </section>
+    </main>
+    
+    <!-- 🔷 FOOTER -->
+    <footer class="footer-area">
+        <a href="mailto:support@xpertzones.com">support@XpertZones.com</a>
+    </footer>
 
 </body>
 </html>

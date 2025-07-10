@@ -12,7 +12,7 @@
             font-family: 'Open Sans', 'Roboto', sans-serif;
             background-color: #f4f7f6;
             margin: 0;
-            padding: 40px 20px;
+            padding: 40px 15px; /* Added some padding for small screens */
             color: #000000;
         }
 
@@ -22,15 +22,14 @@
         }
 
         .logo {
-            max-width: 200px;
+            max-width: 180px; /* Slightly smaller logo */
             margin-bottom: 30px; 
         }
 
         .main-heading {
             font-family: 'Roboto', sans-serif;
-            /* ADJUSTMENT: Made font significantly larger */
-            font-size: clamp(60px, 10vw, 80px); 
-            font-weight: 900; /* Bolder */
+            font-size: clamp(50px, 10vw, 72px); 
+            font-weight: 900;
             text-transform: uppercase;
             color: #1E3A5F;
             margin: 0 0 10px 0;
@@ -40,7 +39,6 @@
         .subheading {
             font-size: clamp(18px, 4vw, 22px);
             font-weight: 400;
-            /* ADJUSTMENT: Reduced bottom margin to bring content closer */
             margin: 0 0 40px 0; 
         }
 
@@ -49,19 +47,19 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
             justify-content: center;
-            gap: 20px;
+            gap: 15px; /* Reduced gap between cards */
         }
 
         .team-card {
-            /* ADJUSTMENT: Made card smaller to fit in one line */
-            flex: 1 1 250px; 
-            max-width: 280px; 
+            /* ADJUSTMENT: Made card smaller and more flexible */
+            flex: 1 1 220px; 
+            max-width: 250px; 
             background-color: #ffffff;
             border: 1px solid #000000;
-            padding: 20px;
-            /* ADJUSTMENT: All text inside the card is now center-aligned */
+            /* ADJUSTMENT: Reduced padding */
+            padding: 15px; 
             text-align: center; 
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
             display: flex;
@@ -70,16 +68,15 @@
 
         .team-card .profile-picture {
             width: 100%;
-            height: auto;
-            max-height: 220px;
+            height: 180px; /* Fixed height for consistency */
             object-fit: cover;
+            object-position: center; /* Ensures faces are centered */
             border-radius: 4px;
             margin-bottom: 15px;
         }
 
         .team-card .name {
-            font-size: 18px;
-            /* ADJUSTMENT: Name is confirmed bold */
+            font-size: 17px; /* Slightly smaller font */
             font-weight: bold; 
             text-transform: uppercase;
             color: #007BBD;
@@ -91,31 +88,22 @@
         }
 
         .team-card .position {
-            font-size: 15px;
+            font-size: 14px; /* Slightly smaller font */
             font-weight: 600;
             color: #333333;
             margin: 0 0 10px 0;
         }
 
         .team-card .description {
-            font-size: 14px;
+            font-size: 13px; /* Smaller font for description */
             color: #333333;
             line-height: 1.5;
             margin: 0;
         }
 
-        .team-card .description p {
-            margin: 0 0 10px 0;
-        }
-
-        .team-card .description p:last-child {
-            margin-bottom: 0;
-        }
-
         /* --- FOOTER --- */
         .footer-area {
             text-align: center;
-            /* ADJUSTMENT: Reduced top margin */
             margin-top: 50px; 
             font-size: 16px;
             color: #333333;
@@ -125,6 +113,14 @@
             color: #007BBD;
             text-decoration: none;
         }
+        
+        /* ADJUSTMENT: This is the key for forcing 4 cards in a line on desktops */
+        @media (min-width: 1024px) {
+            .team-section {
+                flex-wrap: nowrap; /* Prevents wrapping, forcing cards to shrink to fit */
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -145,10 +141,7 @@
                 <img src="person1.png" alt="Shachindra Nath Mondal" class="profile-picture">
                 <h3 class="name">Shachindra Nath <span class="last-name">Mondal</span></h3>
                 <p class="position">Chief Operations Officer (COO)</p>
-                <div class="description">
-                    <p>Shachindra oversees full-scale operations at XpertZones and leads client communication channels.</p>
-                    <p>He ensures every client is matched with the right service team for smooth project execution.</p>
-                </div>
+                <p class="description">Oversees full-scale operations and leads client communication to ensure smooth project execution from start to finish.</p>
             </div>
 
             <!-- Card 2: Sanjoy Kumar Paul -->
@@ -156,10 +149,7 @@
                 <img src="person2.png" alt="Sanjoy Kumar Paul" class="profile-picture">
                 <h3 class="name">Sanjoy Kumar <span class="last-name">Paul</span></h3>
                 <p class="position">Chief Design Officer (CDO)</p>
-                <div class="description">
-                    <p>Sanjoy brings over 8 years of experience in the graphic design industry.</p>
-                    <p>He leads all creative strategies and manages the entire design team at XpertZones.</p>
-                </div>
+                <p class="description">With 8+ years of experience, he leads all creative strategies and ensures every visual delivers impact and professionalism.</p>
             </div>
 
             <!-- Card 3: Indrojit Mondal -->
@@ -167,10 +157,7 @@
                 <img src="person3.png" alt="Indrojit Mondal" class="profile-picture">
                 <h3 class="name">Indrojit <span class="last-name">Mondal</span></h3>
                 <p class="position">Chief Technology Officer (CTO)</p>
-                <div class="description">
-                    <p>Indrojit leads the full web development wing of XpertZones, covering both front-end and back-end systems.</p>
-                    <p>He specializes in building high-performance, secure, and scalable digital platforms.</p>
-                </div>
+                <p class="description">Leads our web development wing, building high-performance, secure, and scalable digital platforms that are future-proof.</p>
             </div>
 
             <!-- Card 4: Sapnil Pal -->
@@ -178,10 +165,7 @@
                 <img src="person4.png" alt="Sapnil Pal" class="profile-picture">
                 <h3 class="name">Sapnil <span class="last-name">Pal</span></h3>
                 <p class="position">Chief Marketing Officer (CMO)</p>
-                <div class="description">
-                    <p>Sapnil is in charge of all digital marketing strategies and performance-driven campaigns at XpertZones.</p>
-                    <p>He works across SEO, social media, content, and paid ads to boost brand visibility.</p>
-                </div>
+                <p class="description">In charge of digital marketing strategies, including SEO and social media, to boost brand visibility and reach.</p>
             </div>
 
         </section>
